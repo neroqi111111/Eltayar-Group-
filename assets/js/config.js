@@ -1,6 +1,7 @@
-// Optional: fill these in to enable the online project-request form (Supabase).
-// Use ONLY the public anon key here, never a service-role key.
+// Public browser configuration only.
+// Supabase publishable keys are intended for client-side use.
+// NEVER put the service_role key or any secret in this file.
 window.ELTAYAR_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://izxdoyqypugjbskfuqjc.supabase.co",
+  supabaseAnonKey: "sb_publishable_HXZmulncL6hyQUQQ6tDuyw_7yETyGDf"
 };

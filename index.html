@@ -8,48 +8,931 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Eltayar Group — Engineered to fly.">
   <meta property="og:description" content="Custom software, websites, dashboards, automation and security-minded engineering.">
-  <meta property="og:image" content="assets/images/eltayar-emblem.webp">
   <title>Eltayar Group — Engineered to fly.</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
   <style>
-:root{--void:#04050a;--panel:#0b0d17;--panel-2:#10131f;--line:rgba(242,185,59,.2);--line-hi:rgba(242,185,59,.6);--gold:#f2b93b;--gold-hi:#ffd978;--cyan:#38f0ff;--alert:#ff3d5a;--text:#ece6d6;--mute:#9a968a;--display:"Chakra Petch","Segoe UI",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--void);color:var(--text);font:400 16px/1.65 var(--display);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:clip;background-image:linear-gradient(rgba(242,185,59,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(242,185,59,.035) 1px,transparent 1px);background-size:48px 48px}.wrap{max-width:1180px;margin:0 auto}a{color:inherit}:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}
-.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;background:var(--gold);color:#120c00;font-weight:700}.skip-link:focus{top:12px}
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;background:rgba(4,5,10,.82);backdrop-filter:blur(10px)}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);text-decoration:none;text-shadow:0 0 14px rgba(242,185,59,.45);white-space:nowrap}.brand img{width:28px;height:28px;object-fit:contain}.links{display:flex;gap:22px;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase}.links a{text-decoration:none;color:var(--mute);transition:color .2s}.links a:hover{color:var(--gold-hi)}
-.nav-actions{display:flex;align-items:center;gap:10px}.menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line-hi);background:transparent;color:var(--gold-hi);align-items:center;justify-content:center;flex-direction:column;gap:5px}.menu-toggle span{display:block;width:18px;height:2px;background:currentColor}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;font:600 13px var(--display);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);background:var(--gold);color:#120c00;cursor:pointer;transition:.2s}.btn:hover{background:var(--gold-hi);box-shadow:0 0 22px rgba(242,185,59,.55);transform:translateY(-1px)}.btn.ghost{background:transparent;color:var(--gold-hi)}.btn.ghost:hover{background:rgba(242,185,59,.1)}.btn.sm{padding:9px 14px;font-size:12px}
-.hero{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:56px 40px}.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.3;pointer-events:none}.copy,.emblem{position:relative;z-index:1;min-width:0}.eyebrow{font:500 12px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1;font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:16px 0 20px}.glitch{color:var(--gold);text-shadow:0 0 18px rgba(242,185,59,.7),0 0 46px rgba(242,185,59,.35)}.lede{max-width:52ch;color:#cfc9b8;font-size:1.08rem}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.term{margin-top:30px;max-width:520px;border:1px solid var(--line);background:rgba(0,0,0,.55);padding:12px 14px;font:400 13px/1.5 var(--mono);color:var(--gold-hi);min-height:46px}.term b{color:var(--cyan)}
-.emblem{aspect-ratio:1;width:100%;max-width:520px;margin-inline:auto}.emblem img{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain;mix-blend-mode:screen;filter:drop-shadow(0 0 26px rgba(242,185,59,.38))}.emblem svg.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.r1{transform-origin:50% 50%;animation:spin 70s linear infinite}.r2{transform-origin:50% 50%;animation:spin 46s linear infinite reverse}@keyframes spin{to{transform:rotate(360deg)}}
-.ticker{overflow:hidden;border-block:1px solid var(--line);padding:12px 0;font:500 12px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}.track{display:flex;width:max-content}.track span{padding-right:38px;white-space:nowrap}.track span::before{content:"◆";color:var(--gold);margin-right:38px}
-.sec{padding-block:76px 8px}.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:680px}.tag{font:500 12px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}h2{font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.08;text-transform:uppercase}h2 em{font-style:normal;color:var(--gold)}.sec-head p{color:#bdb7a6}
-.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{position:relative;padding:26px;background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);min-width:0}.card::before,.card::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--gold);pointer-events:none}.card::before{top:-1px;left:-1px;border-right:0;border-bottom:0}.card::after{bottom:-1px;right:-1px;border-left:0;border-top:0}.card:hover{border-color:var(--line-hi)}
-.svc svg{width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.5}.svc h3{margin:16px 0 8px;font-size:1.15rem;text-transform:uppercase}.svc p{color:#bdb7a6;font-size:.96rem}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}.chips span{font:500 11px var(--mono);color:var(--cyan);border:1px solid rgba(56,240,255,.3);padding:3px 8px}
-.tier{display:flex;flex-direction:column;gap:14px}.tier.hot{border-color:var(--gold);box-shadow:0 0 42px rgba(242,185,59,.16)}.badge{position:absolute;top:-12px;right:18px;background:var(--gold);color:#120c00;font:700 11px var(--mono);padding:3px 10px}.tier .code{font:500 12px var(--mono);color:var(--cyan)}.tier h3{font-size:1.5rem;text-transform:uppercase}.tier .for{color:var(--mute);font-size:.92rem}.pricebox{border-block:1px dashed var(--line);padding:14px 0}.old{font:400 13px var(--mono);color:var(--mute);text-decoration:line-through}.price{font-size:2.5rem;font-weight:700;color:var(--gold-hi)}.price small{font:400 12px var(--mono);color:var(--mute)}.feat{display:grid;gap:9px;font-size:.93rem;color:#d8d2c0}.feat li{position:relative;padding-left:20px}.feat li::before{content:"+";position:absolute;left:0;color:var(--cyan)}.tier .btn{margin-top:auto}.note{margin-top:20px;font:400 12px/1.6 var(--mono);color:var(--mute)}
-.offer h3{font-size:1.2rem;text-transform:uppercase}.offer p{color:#bdb7a6}.pct{font-size:3rem;font-weight:700;color:var(--gold-hi)}.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}.cd div{border:1px solid var(--line);text-align:center;padding:8px 0}.cd b{display:block;font:500 1.5rem var(--mono);color:var(--cyan)}.cd span{font:400 10px var(--mono);color:var(--mute)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);counter-reset:s}.steps li{position:relative;padding:22px 18px 0 0;border-top:1px solid var(--line);color:#bdb7a6}.steps li::before{counter-increment:s;content:"STEP " counter(s);display:block;font:500 11px var(--mono);color:var(--cyan)}.steps h3{font-size:1.05rem;text-transform:uppercase;color:var(--text)}
-.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px}.row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}.row .k{grid-column:1/-1;font:500 11px var(--mono);color:var(--cyan)}.row .v{font:500 15px var(--mono);color:var(--gold-hi);overflow-wrap:anywhere;text-decoration:none}.f{display:grid;gap:16px}label{display:block;font:500 11px var(--mono);color:var(--cyan);margin-bottom:6px}input,select,textarea{width:100%;background:#070912;color:var(--text);border:1px solid var(--line);padding:11px 12px;font:400 15px var(--display)}textarea{min-height:120px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.chk{display:flex;gap:10px;align-items:center}.chk input{width:18px;height:18px}.status{font:400 12px var(--mono);color:var(--cyan)}
-details{border:1px solid var(--line);background:var(--panel);padding:0 20px}details+details{margin-top:10px}summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none}details p{padding-bottom:16px;color:#bdb7a6}footer{margin-top:84px;border-top:1px solid var(--line);padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;font:400 12px var(--mono);color:var(--mute)}
-@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}}@media(max-width:860px){.nav{flex-wrap:wrap}.links{display:none;order:3;flex:0 0 100%;flex-direction:column;gap:0}.nav.is-open .links{display:flex}.links a{padding:12px 8px}.menu-toggle{display:flex}.hero{grid-template-columns:1fr}.emblem{max-width:380px}.g3{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}@media(max-width:620px){.g3,.g4{grid-template-columns:1fr}.two{grid-template-columns:1fr}.nav-cta{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.r1,.r2{animation:none}.hero canvas{display:none}}
-  </style>
+/* Layout: one-page HUD. Hero pairs copy with the logo inside rotating targeting rings; sections use corner-bracket panels lifted from the logo's crosshair frame. Single dark look by design. */
+:root{
+  --void:#04050a; --panel:#0b0d17; --panel-2:#10131f;
+  --line:rgba(242,185,59,.2); --line-hi:rgba(242,185,59,.6);
+  --gold:#f2b93b; --gold-hi:#ffd978; --gold-lo:#a87a14;
+  --cyan:#38f0ff; --alert:#ff3d5a;
+  --text:#ece6d6; --mute:#9a968a;
+  --display:"Chakra Petch","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--void);color:var(--text);font:400 16px/1.65 var(--display);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:clip;
+  background-image:linear-gradient(rgba(242,185,59,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(242,185,59,.035) 1px,transparent 1px);background-size:48px 48px}
+.wrap{max-width:1180px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+
+.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;background:var(--gold);color:#120c00;font-weight:700}
+.skip-link:focus{top:12px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;background:rgba(4,5,10,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);text-decoration:none;text-shadow:0 0 14px rgba(242,185,59,.45);white-space:nowrap}
+.brand svg{width:28px;height:28px;flex:none}
+.links{display:flex;gap:22px;font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--mute);transition:color .2s}
+.links a:hover{color:var(--gold-hi)}
+@media(max-width:860px){.links{display:none}}
+
+/* Mobile navigation */
+.nav-actions{display:flex;align-items:center;gap:10px}
+.menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line-hi);background:transparent;color:var(--gold-hi);align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.menu-toggle span{display:block;width:18px;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+.nav.is-open .menu-toggle span:first-child{transform:translateY(7px) rotate(45deg)}
+.nav.is-open .menu-toggle span:nth-child(2){opacity:0}
+.nav.is-open .menu-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+  .nav{flex-wrap:wrap}
+  .menu-toggle{display:flex}
+  .links{display:none;order:3;flex:0 0 100%;padding:12px 0 6px;gap:0;flex-direction:column;border-top:1px solid var(--line)}
+  .nav.is-open .links{display:flex}
+  .links a{padding:12px 8px;border-bottom:1px solid rgba(242,185,59,.09)}
+  .nav-cta{padding:9px 11px;font-size:10px;letter-spacing:.06em}
+}
+@media(max-width:390px){.brand{font-size:12px;letter-spacing:.1em}.nav-cta{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;font:600 13px var(--display);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);border-radius:2px;background:var(--gold);color:#120c00;cursor:pointer;transition:box-shadow .25s,background .25s,transform .25s}
+.btn:hover{background:var(--gold-hi);box-shadow:0 0 22px rgba(242,185,59,.55);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--gold-hi)}
+.btn.ghost:hover{background:rgba(242,185,59,.1)}
+.btn.sm{padding:9px 14px;font-size:12px}
+
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:56px 40px}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.3;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse at 70% 50%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 50%,#000 10%,transparent 70%)}
+.copy,.emblem{position:relative;z-index:1;min-width:0}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);text-shadow:0 0 12px rgba(56,240,255,.5)}
+h1{font-size:clamp(2.5rem,7vw,4.8rem);line-height:1;font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:16px 0 20px;text-wrap:balance}
+.glitch{position:relative;display:inline-block;color:var(--gold);text-shadow:0 0 18px rgba(242,185,59,.7),0 0 46px rgba(242,185,59,.35)}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none;opacity:0}
+.glitch::before{color:var(--cyan);text-shadow:none}
+.glitch::after{color:var(--alert);text-shadow:none}
+.lede{max-width:52ch;color:#cfc9b8;font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.term{margin-top:30px;max-width:520px;border:1px solid var(--line);background:rgba(0,0,0,.55);padding:12px 14px;font:400 13px/1.5 var(--mono);color:var(--gold-hi);min-height:46px;overflow-wrap:anywhere}
+.term b{color:var(--cyan);font-weight:500}
+.caret{display:inline-block;width:8px;height:1em;background:var(--cyan);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.emblem{aspect-ratio:1;width:100%;max-width:520px;margin-inline:auto;background:radial-gradient(ellipse at 50% 48%,rgba(242,185,59,.075),transparent 64%)}
+.emblem img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 18px rgba(242,185,59,.3));transform:scale(1.015)}
+.emblem svg.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.r1{transform-origin:50% 50%;animation:spin 70s linear infinite}
+.r2{transform-origin:50% 50%;animation:spin 46s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.emblem::after{content:"";position:absolute;left:8%;right:8%;height:2px;top:10%;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.22;box-shadow:0 0 12px var(--cyan);animation:scan 8s ease-in-out infinite}
+@keyframes scan{0%,100%{top:12%}50%{top:88%}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:36px}.emblem{max-width:380px}}
+
+/* ticker */
+.ticker{overflow:hidden;border-block:1px solid var(--line);padding:12px 0;font:500 12px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.track{display:flex;gap:0;width:max-content;animation:tick 38s linear infinite}
+.track span{padding-right:38px;white-space:nowrap}
+.track span::before{content:"\25C6";color:var(--gold);margin-right:38px;text-shadow:0 0 10px var(--gold)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding-block:76px 8px}
+.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:680px}
+.tag{font:500 12px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+h2{font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.08;text-transform:uppercase;text-wrap:balance}
+h2 em{font-style:normal;color:var(--gold);text-shadow:0 0 18px rgba(242,185,59,.5)}
+.sec-head p{color:#bdb7a6}
+
+.card{position:relative;padding:26px;background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);min-width:0;transition:border-color .25s,background .25s}
+.card::before,.card::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--gold);transition:width .25s,height .25s;pointer-events:none}
+.card::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.card::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.card:hover{border-color:var(--line-hi)}
+.card:hover::before,.card:hover::after{width:30px;height:30px}
+
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.g3,.g4{grid-template-columns:1fr}}
+
+.svc svg{width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(242,185,59,.6))}
+.svc h3{margin:16px 0 8px;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em}
+.svc p{color:#bdb7a6;font-size:.96rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(56,240,255,.3);padding:3px 8px}
+
+/* pricing */
+.tier{display:flex;flex-direction:column;gap:14px}
+.tier.hot{border-color:var(--gold);box-shadow:0 0 0 1px rgba(242,185,59,.25),0 0 42px rgba(242,185,59,.16)}
+.badge{position:absolute;top:-12px;right:18px;background:var(--gold);color:#120c00;font:700 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:3px 10px}
+.tier .code{font:500 12px var(--mono);letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
+.tier h3{font-size:1.5rem;text-transform:uppercase;letter-spacing:.05em}
+.tier .for{color:var(--mute);font-size:.92rem;min-height:3em}
+.pricebox{border-block:1px dashed var(--line);padding:14px 0}
+.old{font:400 13px var(--mono);color:var(--mute);text-decoration:line-through}
+.price{font-size:2.5rem;font-weight:700;line-height:1.1;color:var(--gold-hi);text-shadow:0 0 22px rgba(242,185,59,.5);font-variant-numeric:tabular-nums}
+.price small{font:400 12px var(--mono);color:var(--mute);text-shadow:none;margin-left:6px;letter-spacing:.04em}
+.feat{display:grid;gap:9px;font-size:.93rem;color:#d8d2c0;margin-bottom:8px}
+.feat li{position:relative;padding-left:20px}
+.feat li::before{content:"+";position:absolute;left:0;color:var(--cyan);font-family:var(--mono);font-weight:500}
+.tier .btn{margin-top:auto}
+.note{margin-top:20px;font:400 12px/1.6 var(--mono);color:var(--mute)}
+
+/* offers */
+.offer h3{font-size:1.2rem;text-transform:uppercase;letter-spacing:.05em;margin:10px 0 8px}
+.offer p{color:#bdb7a6;font-size:.96rem}
+.pct{font-size:3rem;font-weight:700;color:var(--gold-hi);text-shadow:0 0 24px rgba(242,185,59,.6);line-height:1}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.cd div{border:1px solid var(--line);background:rgba(0,0,0,.45);text-align:center;padding:8px 0}
+.cd b{display:block;font:500 1.5rem var(--mono);color:var(--cyan);text-shadow:0 0 12px rgba(56,240,255,.5);font-variant-numeric:tabular-nums}
+.cd span{font:400 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.steps li{position:relative;padding:22px 18px 0 0;border-top:1px solid var(--line);color:#bdb7a6;font-size:.94rem;min-width:0}
+.steps li::before{counter-increment:s;content:"STEP " counter(s);display:block;font:500 11px var(--mono);letter-spacing:.2em;color:var(--cyan);margin-bottom:8px}
+.steps li::after{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.steps h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text);margin-bottom:6px}
+@media(max-width:900px){.steps{grid-template-columns:1fr;gap:6px}.steps li{padding-bottom:16px}}
+
+/* contact */
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}
+.row:last-of-type{border-bottom:0}
+.row .k{grid-column:1/-1;font:500 11px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.row .v{font:500 15px var(--mono);color:var(--gold-hi);overflow-wrap:anywhere;min-width:0;text-decoration:none}
+a.v:hover{text-decoration:underline}
+label{display:block;font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+input,select,textarea{width:100%;background:#070912;color:var(--text);border:1px solid var(--line);border-radius:2px;padding:11px 12px;font:400 15px var(--display)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:0;border-color:var(--cyan)}
+textarea{min-height:120px;resize:vertical}
+.f{display:grid;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+.chk{display:flex;gap:10px;align-items:center;font-size:.92rem;color:#d8d2c0}
+.chk input{width:18px;height:18px;accent-color:var(--gold);flex:none}
+.status{font:400 12px var(--mono);color:var(--cyan);min-height:1.4em}
+
+/* faq */
+details{border:1px solid var(--line);background:var(--panel);padding:0 20px}
+details+details{margin-top:10px}
+summary{cursor:pointer;padding:16px 0;font-weight:600;letter-spacing:.04em;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--gold);flex:none}
+details[open] summary::after{content:"\2212"}
+details p{padding-bottom:16px;color:#bdb7a6;max-width:70ch}
+
+footer{margin-top:84px;border-top:1px solid var(--line);padding-block:28px 36px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font:400 12px/1.6 var(--mono);color:var(--mute);letter-spacing:.06em}
+footer a{color:var(--gold-hi);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .by{color:var(--text)}
+
+@media(prefers-reduced-motion:no-preference){
+  .glitch::before{animation:g1 5s infinite}
+  .glitch::after{animation:g2 5s infinite}
+}
+@keyframes g1{0%,92%,100%{opacity:0}93%{opacity:.85;transform:translate(-3px,1px);clip-path:inset(10% 0 55% 0)}96%{opacity:.85;transform:translate(3px,-1px);clip-path:inset(60% 0 8% 0)}}
+@keyframes g2{0%,93%,100%{opacity:0}94%{opacity:.8;transform:translate(3px,-1px);clip-path:inset(50% 0 20% 0)}97%{opacity:.8;transform:translate(-3px,1px);clip-path:inset(5% 0 70% 0)}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .r1,.r2,.track,.caret,.emblem::after{animation:none}
+  .hero canvas{display:none}
+}
+
+/* Work, trust and currency controls */
+.work-card,.trust-card{display:flex;flex-direction:column;gap:13px}
+.work-card h3,.trust-card h3{font-size:1.35rem;letter-spacing:.06em;color:var(--gold-hi)}
+.work-card p,.trust-card p{color:#bdb7a6;font-size:.94rem}
+.work-card strong{color:var(--text);font-weight:600}
+.work-card .work-status{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font:400 11px/1.6 var(--mono);color:var(--mute)}
+.work-card .btn{align-self:flex-start;margin-top:4px}
+.text-link{color:var(--gold-hi);font:500 12px var(--mono);text-decoration:none;letter-spacing:.06em}
+.text-link:hover{text-decoration:underline}
+.pricing-notes{margin-top:18px;padding:12px 16px;border:1px solid var(--line);background:rgba(0,0,0,.28)}
+.pricing-notes .note{margin:4px 0}
+.pricing-notes strong{color:var(--gold-hi)}
+.currency-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+.currency-label{font:500 10px var(--mono);letter-spacing:.16em;color:var(--mute)}
+.currency-switch{display:inline-flex;border:1px solid var(--line-hi);padding:3px;gap:3px;background:rgba(0,0,0,.35)}
+.currency-btn{border:0;background:transparent;color:var(--mute);padding:7px 13px;font:500 11px var(--mono);letter-spacing:.12em;cursor:pointer}
+.currency-btn.is-active{background:var(--gold);color:#120c00}.currency-btn:disabled{opacity:.35;cursor:not-allowed}
+.rate-status{font:400 10px var(--mono);color:var(--mute)}
+.tier .old:empty{display:none}
+.tier .old:empty+.price{padding-top:0}
+.tier.hot{transform:translateY(-3px)}
+@media(max-width:620px){.currency-row{align-items:flex-start}.work-card .btn{width:100%}.tier.hot{transform:none}}
+
+
+
+/* Final visual polish: consistent rhythm, balanced cards and cleaner responsive edges */
+:root{
+  --surface-edge:rgba(242,185,59,.24);
+  --surface-glow:rgba(56,240,255,.07);
+}
+html{scroll-padding-top:88px}
+body{min-width:320px}
+.wrap{width:min(100% - 40px,1180px)}
+.nav{min-height:68px;padding-inline:2px}
+.links{gap:clamp(12px,1.7vw,22px);font-size:11px;letter-spacing:.1em}
+.nav-actions{flex:none}
+.hero{min-height:560px;gap:clamp(24px,4vw,54px);padding-block:clamp(42px,6vw,76px) 48px}
+.copy{max-width:620px}
+.hero .lede{max-width:50ch;line-height:1.8}
+.emblem{max-width:min(100%,500px)}
+.sec{padding-block:clamp(58px,7vw,82px) 8px;scroll-margin-top:88px}
+.sec-head{gap:12px;margin-bottom:clamp(24px,3vw,36px)}
+.sec-head h2{font-size:clamp(1.75rem,3.4vw,2.55rem);line-height:1.15;letter-spacing:-.015em;text-wrap:balance}
+.sec-head p:not(.tag){max-width:68ch;line-height:1.75}
+.grid{align-items:stretch;gap:clamp(12px,1.6vw,18px)}
+.card{height:100%;padding:clamp(18px,2.2vw,26px);border-color:var(--surface-edge);background:linear-gradient(145deg,rgba(16,19,31,.98),rgba(8,10,17,.98));box-shadow:inset 0 1px rgba(255,255,255,.018);}
+.card:hover{border-color:var(--line-hi);background:linear-gradient(145deg,#121725,#090b14);box-shadow:0 10px 28px rgba(0,0,0,.2),0 0 24px rgba(242,185,59,.045)}
+.card::before,.card::after{width:13px;height:13px;border-width:1px}
+.card:hover::before,.card:hover::after{width:22px;height:22px}
+.svc h3,.work-card h3,.trust-card h3,.tier h3{line-height:1.2;text-wrap:balance}
+.svc p,.work-card p,.trust-card p,.offer p{line-height:1.72}
+.svc{min-height:250px}
+.work-card,.trust-card{gap:12px;min-height:100%}
+.work-card .code,.trust-card .code{font:500 10px/1.5 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);}
+.work-card .work-status{line-height:1.65}
+.tier{gap:15px;padding-top:28px}
+.tier .for{min-height:0;line-height:1.6}
+.pricebox{min-height:91px;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:13px 0}
+.price{font-size:clamp(1.8rem,2.7vw,2.35rem);letter-spacing:-.035em;white-space:nowrap}
+.price small{display:inline-block;font-size:10px;white-space:normal}
+.old{font-size:11px}
+.feat{gap:10px;line-height:1.55}
+.tier .btn{width:100%;min-height:46px}
+.badge{top:-10px;right:14px;padding:4px 9px;font-size:10px;box-shadow:0 4px 14px rgba(242,185,59,.18)}
+.tier.hot{transform:translateY(-4px);box-shadow:0 0 0 1px rgba(242,185,59,.24),0 14px 36px rgba(242,185,59,.09)}
+.pricing-notes{border-color:var(--surface-edge);padding:14px 16px}
+.currency-switch{border-radius:3px}
+.currency-btn{min-width:58px;border-radius:2px;transition:background .2s,color .2s}
+.currency-btn:not(.is-active):hover:not(:disabled){color:var(--gold-hi);background:rgba(242,185,59,.08)}
+.offer{min-height:210px}
+.cd{gap:7px}
+.cd div{border-color:var(--surface-edge);padding:10px 4px}
+.split{align-items:stretch;gap:clamp(14px,2vw,20px)}
+.split>.card{min-width:0}
+.f{gap:18px}
+.two{gap:14px}
+input,select,textarea{min-height:46px;border-color:var(--surface-edge);transition:border-color .2s,box-shadow .2s,background .2s}
+input:hover,select:hover,textarea:hover{border-color:var(--line-hi)}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgba(56,240,255,.08)}
+textarea{min-height:132px}
+.chk{align-items:flex-start;line-height:1.55}
+.chk input{margin-top:3px}
+.btn{min-height:46px;transition:box-shadow .22s,background .22s,transform .22s,border-color .22s}
+.btn.ghost{border-color:var(--surface-edge)}
+.btn.ghost:hover{border-color:var(--gold);}
+details{border-color:var(--surface-edge);border-radius:2px;transition:border-color .2s}
+details[open]{border-color:var(--line-hi)}
+summary{align-items:center;line-height:1.5}
+footer{margin-top:clamp(64px,8vw,92px);gap:14px 24px}
+:where(a,button,input,select,textarea,summary){-webkit-tap-highlight-color:transparent}
+@media(max-width:1000px){
+  .wrap{width:min(100% - 32px,1180px)}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tier{min-height:100%}
+}
+@media(max-width:860px){
+  .hero{min-height:0;grid-template-columns:1fr;padding-block:38px 34px}
+  .copy{max-width:720px}
+  .emblem{width:min(82vw,390px);margin-top:4px}
+  .links{letter-spacing:.08em}
+}
+@media(max-width:620px){
+  .wrap{width:calc(100% - 28px)}
+  .nav{gap:10px;min-height:62px}
+  .nav-actions{gap:8px}
+  .nav-cta{min-height:40px;padding:8px 10px;font-size:10px}
+  .menu-toggle{width:40px;height:40px}
+  .hero{padding-top:30px;gap:18px}
+  h1{font-size:clamp(2.45rem,12vw,4rem);line-height:1.02}
+  .eyebrow,.tag{font-size:10px;letter-spacing:.16em}
+  .hero .lede{font-size:1rem}
+  .cta{gap:9px;margin-top:22px}
+  .cta .btn{flex:1 1 145px;padding-inline:12px;font-size:11px}
+  .term{margin-top:22px;font-size:11px}
+  .emblem{width:min(78vw,330px)}
+  .sec{padding-top:54px}
+  .sec-head{margin-bottom:22px}
+  .g3,.g4{grid-template-columns:1fr}
+  .svc{min-height:0}
+  .work-card,.trust-card{min-height:0}
+  .tier{padding:24px 20px 20px}
+  .tier.hot{transform:none}
+  .price{font-size:2.25rem}
+  .pricing-notes{padding:12px}
+  .currency-row{gap:9px}
+  .rate-status{flex-basis:100%;line-height:1.5}
+  .split{gap:12px}
+  footer{padding-bottom:28px}
+}
+@media(max-width:380px){
+  .wrap{width:calc(100% - 22px)}
+  .brand{font-size:11px;letter-spacing:.08em}
+  .nav-cta{display:none}
+  .btn{letter-spacing:.08em}
+  .cd{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+
+
+/* fixes */
+.brand-logo{width:30px;height:34px;object-fit:contain;flex:none;filter:drop-shadow(0 0 8px rgba(242,185,59,.45))}
+.price small{display:block;margin:6px 0 0}
+.chk{text-transform:none;letter-spacing:0;font:400 .92rem/1.55 var(--display);margin:0;color:#d8d2c0}
+.chk a{color:var(--gold-hi);white-space:nowrap}
+@media(max-width:860px){.emblem{order:-1;width:min(62vw,270px);margin-bottom:-8px}}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a><div class="wrap">
-<header class="nav"><a class="brand" href="#top"><img src="assets/images/brand-mark.png" alt="">Eltayar</a><nav class="links" id="site-links"><a href="#services">Services</a><a href="#packages">Packages</a><a href="#offers">Offers</a><a href="#process">Process</a><a href="#contact">Contact</a></nav><div class="nav-actions"><a class="btn sm nav-cta" href="#contact">Start a project</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links"><span></span><span></span><span></span></button></div></header>
-<main id="top" tabindex="-1"><section class="hero" id="main-content"><canvas id="rain" aria-hidden="true"></canvas><div class="copy"><p class="eyebrow">// Software · Websites · Tracking · Security</p><h1>Engineered<br>to <span class="glitch">fly.</span></h1><p class="lede">Eltayar Group designs and codes custom software, websites and project-tracking dashboards for brands that want to move fast. Every build ships with cyber security in the foundation.</p><div class="cta"><a class="btn" href="#packages">See packages</a><a class="btn ghost" href="#contact">Get a quote</a></div><div class="term"><b>$</b> <span id="typed"></span></div></div><div class="emblem" role="img" aria-label="Eltayar Group gold emblem inside a targeting reticle"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="r1" cx="50" cy="50" r="49" fill="none" stroke="#f2b93b" stroke-opacity=".55" stroke-width=".25" stroke-dasharray="1.2 2.4"/><circle class="r2" cx="50" cy="50" r="46.5" fill="none" stroke="#38f0ff" stroke-opacity=".55" stroke-width=".3" stroke-dasharray="14 9 3 9"/></svg><img src="assets/images/eltayar-emblem.webp" alt="Eltayar Group emblem" width="520" height="520"></div></section></main>
-<div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
-<section class="sec" id="services"><div class="sec-head"><p class="tag">// 01 Services</p><h2>Everything your brand needs to <em>go live</em></h2><p>One team for the product, interface and the lock on the door.</p></div><div class="grid g3"><article class="card svc"><h3>Custom Software</h3><p>Desktop, web and internal tools written around how your team works.</p><div class="chips"><span>Python</span><span>Node</span><span>Databases</span></div></article><article class="card svc"><h3>Websites &amp; Web Apps</h3><p>Fast, responsive sites with motion and SEO foundations.</p><div class="chips"><span>Responsive</span><span>Animation</span><span>SEO</span></div></article><article class="card svc"><h3>Project Tracking</h3><p>Dashboards that log, assign and follow every project.</p><div class="chips"><span>Dashboards</span><span>Roles</span><span>Reports</span></div></article><article class="card svc"><h3>Registration</h3><p>Smart forms, searchable records and status history.</p><div class="chips"><span>Forms</span><span>Records</span><span>Exports</span></div></article><article class="card svc"><h3>Cyber Security</h3><p>Secure login, encrypted data and vulnerability scans.</p><div class="chips"><span>Audits</span><span>Pen-testing</span><span>Monitoring</span></div></article><article class="card svc"><h3>Automation &amp; APIs</h3><p>Connect tools, automate work and expose APIs.</p><div class="chips"><span>Integrations</span><span>Bots</span><span>Webhooks</span></div></article></div></section>
-<section class="sec" id="packages"><div class="sec-head"><p class="tag">// 02 Packages</p><h2>Pick a tier. <em>Launch prices</em> are live.</h2></div><div class="grid g4"><article class="card tier"><span class="code">Tier 01</span><h3>Core Launch</h3><p class="for">A sharp, secure website for a brand that needs to be online now.</p><div class="pricebox"><div class="old">$890</div><div class="price">$712<small>/ project</small></div></div><ul class="feat"><li>Custom website, up to 5 pages</li><li>Responsive on every screen</li><li>Neon UI with animation</li><li>SEO and analytics</li><li>14 days support</li></ul><a class="btn ghost" href="#contact" data-pkg="Core Launch">Choose Core</a></article><article class="card tier"><span class="code">Tier 02</span><h3>Neon Pro</h3><p class="for">A custom website or web app with an admin panel.</p><div class="pricebox"><div class="old">$1,890</div><div class="price">$1,512<small>/ project</small></div></div><ul class="feat"><li>Website or app, up to 12 pages</li><li>Admin panel</li><li>Registration forms</li><li>Tracking dashboard</li><li>30 days support</li></ul><a class="btn ghost" href="#contact" data-pkg="Neon Pro">Choose Neon</a></article><article class="card tier hot"><span class="badge">Best value</span><span class="code">Tier 03</span><h3>Matrix Elite</h3><p class="for">A full platform with accounts, roles and live tracking.</p><div class="pricebox"><div class="old">$3,900</div><div class="price">$3,120<small>/ project</small></div></div><ul class="feat"><li>Custom platform</li><li>Login and user roles</li><li>Tracking interface</li><li>Analytics and API</li><li>Security audit</li><li>60 days support</li></ul><a class="btn" href="#contact" data-pkg="Matrix Elite">Choose Matrix</a></article><article class="card tier"><span class="code">Tier 04</span><h3>Overlord</h3><p class="for">Multi-module systems for companies that run operations in software.</p><div class="pricebox"><div class="old">from $7,900</div><div class="price">$6,320<small>/ from</small></div></div><ul class="feat"><li>Multi-module suite</li><li>Custom dashboards</li><li>Automation integrations</li><li>Advanced security</li><li>CI/CD and staging</li><li>90 days priority support</li></ul><a class="btn ghost" href="#contact" data-pkg="Overlord">Request a quote</a></article></div><p class="note">Launch prices apply to bookings made before Dec 31, 2026.</p></section>
-<section class="sec" id="offers"><div class="sec-head"><p class="tag">// 03 Offers</p><h2>Limited <em>launch</em> offers</h2></div><div class="grid g3"><article class="card offer"><div class="pct">-20%</div><h3>Launch discount</h3><p>Applied to every package while the countdown runs.</p><div class="cd"><div><b id="d">00</b><span>Days</span></div><div><b id="h">00</b><span>Hrs</span></div><div><b id="m">00</b><span>Min</span></div><div><b id="s">00</b><span>Sec</span></div></div></article><article class="card offer"><div class="pct">FREE</div><h3>Security audit</h3><p>Available with eligible packages.</p></article><article class="card offer"><div class="pct">+10%</div><h3>Referral credit</h3><p>Credit when a referred client books a project.</p></article></div></section>
-<section class="sec" id="process"><div class="sec-head"><p class="tag">// 04 Process</p><h2>From brief to <em>liftoff</em></h2></div><ol class="steps"><li><h3>Brief</h3>Goal, users and deadline.</li><li><h3>Blueprint</h3>Scope, screens and fixed price.</li><li><h3>Build</h3>Sprint delivery with previews.</li><li><h3>Secure</h3>Scans and hardening.</li><li><h3>Launch</h3>Deployment and support.</li></ol></section>
-<section class="sec" id="contact"><div class="sec-head"><p class="tag">// 05 Contact</p><h2>Ready for <em>takeoff?</em></h2></div><div class="split"><div class="card"><div class="row"><span class="k">Email</span><a class="v" href="mailto:nerotest6@gmail.com" id="v-mail">nerotest6@gmail.com</a><button class="btn ghost sm" type="button" data-copy="v-mail">Copy</button></div><div class="row"><span class="k">Phone</span><a class="v" href="tel:+201060176505" id="v-p1">+20 10 60176505</a><button class="btn ghost sm" type="button" data-copy="v-p1">Copy</button></div><div class="row"><span class="k">Phone</span><a class="v" href="tel:01031062938" id="v-p2">010 31062938</a><button class="btn ghost sm" type="button" data-copy="v-p2">Copy</button></div></div><form class="card f" id="brief"><div class="two"><div><label for="b-name">Your name</label><input id="b-name" required maxlength="100"></div><div><label for="b-mail">Your email</label><input id="b-mail" type="email" required maxlength="254"></div></div><div><label for="b-pkg">Package</label><select id="b-pkg"><option>Core Launch ($890)</option><option>Neon Pro ($1,890)</option><option selected>Matrix Elite ($3,900)</option><option>Overlord (from $7,900)</option><option>Not sure yet</option></select></div><div><label for="b-msg">Project details</label><textarea id="b-msg" required minlength="15"></textarea></div><label class="chk"><input id="b-offer" type="checkbox" checked>Apply the 20% launch discount</label><div class="cta"><button class="btn" type="submit">Copy project brief</button><a class="btn ghost" id="b-mailto" href="mailto:nerotest6@gmail.com">Open in email app</a></div><p class="status" id="b-status"></p></form></div></section>
-<section class="sec" id="faq"><div class="sec-head"><p class="tag">// 06 FAQ</p><h2>Before you <em>ask</em></h2></div><details open><summary>How long does a project take?</summary><p>Core ships in 1–2 weeks, Neon in 3–4, and Matrix in 6–10 depending on modules.</p></details><details><summary>Do I own the code?</summary><p>Yes. You receive the source and documentation after final payment.</p></details><details><summary>How does payment work?</summary><p>50% to start and 50% on delivery.</p></details></section>
-<footer><div>Eltayar Group © <span id="year">2026</span>. All rights reserved.</div><div>Designed &amp; built by <span>Amr Eltayar</span></div></footer>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Eltayar Group, back to top">
+      <img class="brand-logo" src="assets/images/brand-mark.png" alt="" width="30" height="34">
+      Eltayar
+    </a>
+    <nav class="links" id="site-links" aria-label="Sections">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#trust">Trust</a><a href="#packages">Packages</a><a href="#offers">Offers</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn sm nav-cta" href="#contact">Start a project</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top" tabindex="-1">
+    <section class="hero" id="main-content">
+      <canvas id="rain" aria-hidden="true"></canvas>
+      <div class="copy">
+        <p class="eyebrow">// Software · Websites · Tracking · Security</p>
+        <h1>Engineered<br>to <span class="glitch" data-text="fly.">fly.</span></h1>
+        <p class="lede">Eltayar Group designs and codes custom software, websites and project-tracking dashboards for brands that want to move fast. Every build ships with cyber security in the foundation.</p>
+        <div class="cta">
+          <a class="btn" href="#packages">See packages</a>
+          <a class="btn ghost" href="#contact">Get a quote</a>
+        </div>
+        <div class="term" aria-label="Live terminal command preview" aria-live="off"><b>$</b> <span id="typed"></span><span class="caret"></span></div>
+      </div>
+      <div class="emblem" role="img" aria-label="Eltayar Group gold emblem inside a targeting reticle">
+        <img src="assets/images/eltayar-emblem.webp" alt="Eltayar Group gold emblem" width="1024" height="1024" decoding="async" fetchpriority="high">
+      </div>
+    </section>
+  </main>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <section class="sec" id="services">
+    <div class="sec-head">
+      <p class="tag">// 01 Services</p>
+      <h2>Everything your brand needs to <em>go live</em></h2>
+      <p>One team for the product, the interface and the lock on the door.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14 12 6 20l8 8M26 12l8 8-8 8M23 8l-6 24"/></svg>
+        <h3>Custom Software</h3>
+        <p>Desktop, web and internal tools written around how your team actually works. Clean architecture, documented, ready to extend.</p>
+        <div class="chips"><span>Python</span><span>Node</span><span>Databases</span></div>
+      </article>
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="7" width="30" height="22" rx="2"/><path d="M5 13h30M15 34h10M20 29v5"/></svg>
+        <h3>Websites &amp; Web Apps</h3>
+        <p>Fast, responsive sites with motion, neon-grade visuals and SEO foundations, built to turn visitors into clients.</p>
+        <div class="chips"><span>Responsive</span><span>Animation</span><span>SEO</span></div>
+      </article>
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 32V8M6 32h28"/><path d="m11 25 7-8 6 5 9-12"/><circle cx="33" cy="10" r="1.6"/></svg>
+        <h3>Project Tracking Interfaces</h3>
+        <p>Dashboards that log, assign and follow every project from first request to final delivery, with live status for the whole team.</p>
+        <div class="chips"><span>Dashboards</span><span>Roles</span><span>Reports</span></div>
+      </article>
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="5" width="24" height="30" rx="2"/><path d="M14 13h12M14 19h12M14 25h7"/></svg>
+        <h3>Brand &amp; Project Registration</h3>
+        <p>Registration portals for brands, clients and projects: smart forms, searchable records, status history and exports.</p>
+        <div class="chips"><span>Forms</span><span>Records</span><span>Exports</span></div>
+      </article>
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 7 9v10c0 8 5 14 13 17 8-3 13-9 13-17V9L20 4Z"/><path d="m14 20 4 4 8-9"/></svg>
+        <h3>Cyber Security</h3>
+        <p>Hardening, audits and monitoring on every build: secure login, encrypted data, vulnerability scans and incident playbooks.</p>
+        <div class="chips"><span>Audits</span><span>Pen-testing</span><span>Monitoring</span></div>
+      </article>
+      <article class="card svc">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="9" cy="20" r="4"/><circle cx="31" cy="9" r="4"/><circle cx="31" cy="31" r="4"/><path d="m13 18 14-7M13 22l14 7"/></svg>
+        <h3>Automation &amp; APIs</h3>
+        <p>Connect your tools, automate repetitive work and expose clean APIs for partners, bots and mobile apps.</p>
+        <div class="chips"><span>Integrations</span><span>Bots</span><span>Webhooks</span></div>
+      </article>
+    </div>
+  </section>
+
+
+
+  <section class="sec" id="work">
+    <div class="sec-head">
+      <p class="tag">// 02 Work / Case Studies</p>
+      <h2>Built in the <em>real world</em></h2>
+      <p>A selection of internal products and working concepts. These are presented as in-house demonstrations, not client engagements or paid case studies.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card work-card">
+        <span class="code">INTERNAL PROJECT 01</span>
+        <h3>EL-TAYAR</h3>
+        <p class="work-problem"><strong>Problem</strong> Business requests and project follow-up need a clear, consistent workflow.</p>
+        <p><strong>Solution</strong> A branded digital presence and project-request experience designed around service discovery, package selection and structured enquiries.</p>
+        <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase integration</span></div>
+        <p class="work-status">Preview: this public Eltayar Group website. Backend features require the configured Supabase project.</p>
+        <a class="btn ghost sm" href="#contact" data-case="EL-TAYAR">Request a walkthrough</a>
+      </article>
+      <article class="card work-card">
+        <span class="code">INTERNAL PROJECT 02</span>
+        <h3>COMMAND BOARD</h3>
+        <p class="work-problem"><strong>Problem</strong> Ideas, plans, tasks and relationships become difficult to manage when scattered across tools.</p>
+        <p><strong>Solution</strong> An offline-first visual planning board concept with a large freeform workspace, custom cards, connections and structured sections.</p>
+        <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Local storage</span></div>
+        <p class="work-status">Preview: private/local demonstration. No public live demo link is currently provided.</p>
+        <a class="btn ghost sm" href="#contact" data-case="COMMAND BOARD">Request a walkthrough</a>
+      </article>
+      <article class="card work-card">
+        <span class="code">INTERNAL PROJECT 03</span>
+        <h3>THE GOLDEN BASE</h3>
+        <p class="work-problem"><strong>Problem</strong> Personal and operational tools can become fragmented across folders and unrelated applications.</p>
+        <p><strong>Solution</strong> A local-first Windows software environment intended to organize tools, projects and reusable workflows in one interface.</p>
+        <div class="chips"><span>Windows</span><span>Desktop UI</span><span>Local-first</span><span>Software integration</span></div>
+        <p class="work-status">Preview: local software demonstration. No public live demo link is currently provided.</p>
+        <a class="btn ghost sm" href="#contact" data-case="THE GOLDEN BASE">Request a walkthrough</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="trust">
+    <div class="sec-head">
+      <p class="tag">// 03 Trust &amp; Transparency</p>
+      <h2>Proof over <em>promises</em></h2>
+      <p>We do not publish invented testimonials or client counts. Review the work, agree on scope, and verify deliverables before launch.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card trust-card">
+        <span class="code">01 / OWNERSHIP</span>
+        <h3>Source handover</h3>
+        <p>Project handover is scoped to include source code, documentation and client-owned access to agreed environments after final payment.</p>
+      </article>
+      <article class="card trust-card">
+        <span class="code">02 / ENGINEERING</span>
+        <h3>Security-minded delivery</h3>
+        <p>Security checks, testing and hardening are included according to the selected package and the agreed project scope.</p>
+      </article>
+      <article class="card trust-card">
+        <span class="code">03 / VERIFICATION</span>
+        <h3>Review before launch</h3>
+        <p>Request a walkthrough of available internal demos and confirm features, milestones and acceptance criteria before contracting.</p>
+        <a href="#contact" class="text-link">Discuss a project →</a>
+      </article>
+    </div>
+    <p class="note">Internal demonstrations are not presented as independent client references. Testimonials and client results will be added only when verified and approved for publication.</p>
+  </section>
+
+  <section class="sec" id="packages">
+    <div class="sec-head">
+      <p class="tag">// 04 Packages</p>
+      <h2>Pick a tier. <em>Launch prices</em> are live.</h2>
+      <p>Clear project pricing in Egyptian pounds. Switch to USD for an indicative conversion. Each tier includes the scope listed below.</p>
+      <div class="currency-row">
+        <span class="currency-label">DISPLAY CURRENCY</span>
+        <div class="currency-switch" role="group" aria-label="Choose pricing currency">
+          <button type="button" class="currency-btn is-active" data-currency="EGP" aria-pressed="true">EGP</button>
+          <button type="button" class="currency-btn" data-currency="USD" aria-pressed="false">USD</button>
+        </div>
+        <span class="rate-status" id="rate-status" role="status" aria-live="polite">EGP prices</span>
+      </div>
+    </div>
+    <div class="grid g4">
+      <article class="card tier">
+        <span class="code">Tier 01</span>
+        <h3>Core Launch</h3>
+        <p class="for">A sharp, secure website for a brand that needs to be online now.</p>
+        <div class="pricebox"><div class="old" data-old-egp="16000">16,000 EGP</div><div class="price" data-egp="12500" data-label=" / project">12,500 <small>EGP / project</small></div></div>
+        <ul class="feat">
+          <li>Custom website, up to 5 pages</li>
+          <li>Responsive on every screen</li>
+          <li>Neon UI with animation</li>
+          <li>Basic SEO and analytics setup</li>
+          <li>SSL and security basics</li>
+          <li>14 days of support</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Core Launch">Choose Core</a>
+      </article>
+      <article class="card tier hot">
+        <span class="badge">Best value</span>
+        <span class="code">Tier 02</span>
+        <h3>Neon Pro</h3>
+        <p class="for">A custom website or web app with an admin panel and a first tracker.</p>
+        <div class="pricebox"><div class="old" data-old-egp="32000">32,000 EGP</div><div class="price" data-egp="24900" data-label=" / project">24,900 <small>EGP / project</small></div></div>
+        <ul class="feat">
+          <li>Website or web app, up to 12 pages</li>
+          <li>Admin panel and content editing</li>
+          <li>Project registration forms</li>
+          <li>Tracking dashboard (lite)</li>
+          <li>Security headers and vulnerability scan</li>
+          <li>30 days of support</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Neon Pro">Choose Neon</a>
+      </article>
+      <article class="card tier">
+        <span class="code">Tier 03</span>
+        <h3>Matrix Elite</h3>
+        <p class="for">A full platform with accounts, roles, a database and live project tracking.</p>
+        <div class="pricebox"><div class="old" data-old-egp="62000">62,000 EGP</div><div class="price" data-egp="48500" data-label=" / project">48,500 <small>EGP / project</small></div></div>
+        <ul class="feat">
+          <li>Custom software or platform</li>
+          <li>Login, user roles and permissions</li>
+          <li>Project and brand tracking interface</li>
+          <li>Registration portal with exports</li>
+          <li>Analytics dashboard and API</li>
+          <li>Security audit and hardening</li>
+          <li>60 days of support</li>
+        </ul>
+        <a class="btn" href="#contact" data-pkg="Matrix Elite">Choose Matrix</a>
+      </article>
+      <article class="card tier">
+        <span class="code">Tier 04</span>
+        <h3>Overlord</h3>
+        <p class="for">Multi-module systems for companies that run their operations on software.</p>
+        <div class="pricebox"><div class="old"></div><div class="price" data-egp="95000" data-label=" / from">95,000 <small>EGP / from</small></div></div>
+        <ul class="feat">
+          <li>Multi-module software suite</li>
+          <li>Custom dashboards and reporting</li>
+          <li>Automation and third-party integrations</li>
+          <li>Advanced cyber security: audit, pen-test report, monitoring</li>
+          <li>CI/CD and staging environment</li>
+          <li>90 days of priority support</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Overlord">Request a quote</a>
+      </article>
+    </div>
+    <div class="pricing-notes">
+      <p class="note">Prices exclude annual domain &amp; cloud hosting fees (billed directly to client's account for full ownership).</p>
+      <p class="note"><strong>Payment terms:</strong> Core Launch and Neon Pro: 50% upfront + 50% on final delivery. Matrix Elite and Overlord: 40% upfront + 30% at the agreed milestone + 30% on final delivery.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="offers">
+    <div class="sec-head">
+      <p class="tag">// 05 Offers</p>
+      <h2>Limited <em>launch</em> offers</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card offer">
+        <div class="pct">-20%</div>
+        <h3>Launch discount</h3>
+        <p>Current package prices are displayed in the pricing section. You can request a launch-offer eligibility review in the project form; no extra discount is automatic or confirmed until agreed in writing.</p>
+        <div class="cd" id="cd" role="timer" aria-label="Time left on launch offer">
+          <div><b id="d">00</b><span>Days</span></div><div><b id="h">00</b><span>Hrs</span></div><div><b id="m">00</b><span>Min</span></div><div><b id="s">00</b><span>Sec</span></div>
+        </div>
+      </article>
+      <article class="card offer">
+        <div class="pct">FREE</div>
+        <h3>Security audit bundle</h3>
+        <p>Get a full vulnerability audit of your project at no extra cost with Neon Pro, Matrix Elite or Overlord.</p>
+        <a class="btn ghost sm" style="margin-top:18px" href="#contact" data-pkg="Neon Pro">Claim bundle</a>
+      </article>
+      <article class="card offer">
+        <div class="pct">+10%</div>
+        <h3>Referral credit</h3>
+        <p>Send a client our way. When their project is booked, you get 10% of its value as credit toward your next build.</p>
+        <a class="btn ghost sm" style="margin-top:18px" href="#contact">Ask how</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="process">
+    <div class="sec-head">
+      <p class="tag">// 06 Process</p>
+      <h2>From brief to <em>liftoff</em></h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Brief</h3>Tell us the goal, the users and the deadline.</li>
+      <li><h3>Blueprint</h3>We map scope, screens and a fixed price.</li>
+      <li><h3>Build</h3>Sprint-style delivery with previews along the way.</li>
+      <li><h3>Secure</h3>Scans, hardening and testing before anything goes live.</li>
+      <li><h3>Launch</h3>Deployment, handover and support.</li>
+    </ol>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="sec-head">
+      <p class="tag">// 07 Contact</p>
+      <h2>Ready for <em>takeoff?</em></h2>
+      <p>Tell us about your project. Send your project details securely through our request form. When the Supabase backend is configured, a successful submission returns a reference code.</p>
+    </div>
+    <div class="split">
+      <div class="card">
+        <div class="row"><span class="k">Email</span><a class="v" href="mailto:nerotest6@gmail.com" id="v-mail">nerotest6@gmail.com</a><button class="btn ghost sm" type="button" data-copy="v-mail">Copy</button></div>
+        <div class="row"><span class="k">Phone</span><a class="v" href="tel:+201060176505" id="v-p1">+20 10 60176505</a><button class="btn ghost sm" type="button" data-copy="v-p1">Copy</button></div>
+        <div class="row"><span class="k">Phone</span><a class="v" href="tel:01031062938" id="v-p2">010 31062938</a><button class="btn ghost sm" type="button" data-copy="v-p2">Copy</button></div>
+        <div class="row"><span class="k">GitHub</span><a class="v" href="https://github.com/neroqi111111" target="_blank" rel="noopener" id="v-gh">github.com/neroqi111111</a><button class="btn ghost sm" type="button" data-copy="v-gh">Copy</button></div>
+      </div>
+      <form class="card f" id="brief">
+        <div class="two">
+          <div><label for="b-name">Your name</label><input id="b-name" name="name" autocomplete="name" placeholder="Jane Doe" required maxlength="100"></div>
+          <div><label for="b-mail">Your email</label><input id="b-mail" name="email" type="email" autocomplete="email" placeholder="you@brand.com" required maxlength="254"></div>
+        </div>
+        <div class="two">
+          <div><label for="b-phone">Phone / WhatsApp (optional)</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" placeholder="+20 1xx xxx xxxx" maxlength="30"></div>
+          <div><label for="b-contact">Preferred contact method</label><select id="b-contact" name="preferred_contact"><option value="email">Email</option><option value="whatsapp">WhatsApp / phone</option></select></div>
+        </div>
+        <div>
+          <label for="b-pkg">Package</label>
+          <select id="b-pkg" name="package">
+            <option value="Core Launch">Core Launch — 12,500 EGP</option>
+            <option value="Neon Pro">Neon Pro — 24,900 EGP</option>
+            <option value="Matrix Elite" selected>Matrix Elite — 48,500 EGP</option>
+            <option value="Overlord">Overlord — from 95,000 EGP</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div><label for="b-msg">Project details</label><textarea id="b-msg" name="details" placeholder="What are we building, for whom, and by when?" required minlength="15" maxlength="4000"></textarea></div>
+        <label class="chk" for="b-offer"><input id="b-offer" name="launch-discount-request" type="checkbox">Please review whether my project qualifies for an additional launch offer (subject to confirmation; no discount is applied automatically).</label>
+        <label class="chk" for="b-consent"><input id="b-consent" name="privacy-consent" type="checkbox" required> I agree that Eltayar Group may use these details to respond to this request. <a href="privacy.html" target="_blank" rel="noopener">Privacy notice</a>.</label>
+        <div class="cta" style="margin-top:0">
+          <button class="btn" id="b-submit" type="submit">Send project request</button>
+          <a class="btn ghost" id="b-mailto" href="mailto:nerotest6@gmail.com">Open in email app</a>
+        </div>
+        <p class="status" id="b-status" role="status" aria-live="polite"></p>
+        <p class="note">The form saves requests through the Supabase Edge Function after setup. A success message appears only after the server confirms the save; email is available as a fallback.</p>
+        <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="b-website">Leave this field empty</label><input id="b-website" name="website" tabindex="-1" autocomplete="off"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="sec-head">
+      <p class="tag">// 08 FAQ</p>
+      <h2>Before you <em>ask</em></h2>
+    </div>
+    <details open><summary>How long does a project take?</summary><p>Core Launch usually ships in 1 to 2 weeks and Neon Pro in 3 to 4. Matrix Elite takes 6 to 10 weeks depending on modules. Overlord is scoped per project during the blueprint step.</p></details>
+    <details><summary>Do I own the code?</summary><p>Yes. You receive the full source, documentation and access to every environment when the final payment clears.</p></details>
+    <details><summary>What does the cyber security work include?</summary><p>Secure authentication, encrypted data, security headers, dependency and vulnerability scans on every tier. Matrix Elite adds a full audit and hardening pass. Overlord adds a penetration-test report and ongoing monitoring.</p></details>
+    <details><summary>How does payment work?</summary><p>Core Launch and Neon Pro: 50% upfront and 50% on final delivery. Matrix Elite and Overlord: 40% upfront, 30% at the agreed milestone, and 30% on final delivery.</p></details>
+    <details><summary>Are domain and hosting included?</summary><p>No. Annual domain and cloud hosting fees are excluded and billed directly to the client's own account, so the client retains ownership.</p></details>
+  </section>
+
+  <noscript><p class="note">JavaScript is disabled. Navigation links and contact details remain available, but interactive effects and the brief-copy feature require JavaScript.</p></noscript>
+  <footer>
+    <div><span class="by">Eltayar Group</span> &copy; <span id="year">2026</span>. All rights reserved.</div>
+    <div>Designed &amp; built by <span class="by">Amr Eltayar</span> &middot; <a href="https://github.com/neroqi111111" target="_blank" rel="noopener">GitHub</a></div>
+  </footer>
 </div>
+
+<script src="assets/js/config.js"></script>
 <script>
-(function(){document.addEventListener('DOMContentLoaded',function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;document.getElementById('year').textContent=new Date().getFullYear();var words=['Custom software','Websites','Tracking dashboards','Cyber security','Automation','APIs'],t=document.getElementById('track');if(t)t.innerHTML=words.concat(words).map(function(w){return '<span>'+w+'</span>'}).join('');try{var cv=document.getElementById('rain');if(cv&&cv.getContext){var cx=cv.getContext('2d'),W=0,H=0,cols=[],fs=14,chars='01{}<>/;=+*#';function size(){var r=cv.getBoundingClientRect();W=cv.width=Math.max(1,Math.floor(r.width));H=cv.height=Math.max(1,Math.floor(r.height));cols=[];for(var i=0;i<Math.floor(W/fs);i++)cols.push(Math.random()*H/fs)}size();window.addEventListener('resize',size);if(!rm)setInterval(function(){if(document.hidden)return;cx.fillStyle='rgba(4,5,10,.14)';cx.fillRect(0,0,W,H);for(var i=0;i<cols.length;i++){cx.fillStyle='#f2b93b';cx.fillText(chars[Math.floor(Math.random()*chars.length)],i*fs,cols[i]*fs);if(cols[i]*fs>H&&Math.random()>.975)cols[i]=0;cols[i]+=1}},70)}}catch(e){}var el=document.getElementById('typed');if(el&&!rm){var lines=['deploy --project your-brand --secure','scan --threats --depth=full','track --registry live --team all','launch --region global'],li=0,ci=0,dir=1;(function tick(){var s=lines[li];ci+=dir;el.textContent=s.slice(0,ci);var d=dir>0?42:20;if(dir>0&&ci>=s.length){dir=-1;d=1800}else if(dir<0&&ci<=0){dir=1;li=(li+1)%lines.length;d=400}setTimeout(tick,d)})()}else if(el)el.textContent='deploy --project your-brand --secure';var end=new Date('2026-12-31T23:59:59+02:00').getTime();function countdown(){var n=Math.max(0,end-Date.now()),s=Math.floor(n/1000),p=function(v){return(v<10?'0':'')+v};document.getElementById('d').textContent=p(Math.floor(s/86400));document.getElementById('h').textContent=p(Math.floor(s%86400/3600));document.getElementById('m').textContent=p(Math.floor(s%3600/60));document.getElementById('s').textContent=p(s%60)}countdown();setInterval(countdown,1000);function copy(text,done,fail){if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(done,fail);else{var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){fail()}ta.remove()}}document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var n=document.getElementById(b.dataset.copy),old=b.textContent;text=n?n.textContent.trim():'';copy(text,function(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1600)},function(){b.textContent='Select text'})})});var sel=document.getElementById('b-pkg'),f=document.getElementById('brief'),st=document.getElementById('b-status'),mt=document.getElementById('b-mailto');function text(){var g=function(id){return document.getElementById(id)};return ['Project brief for Eltayar Group','','Name: '+g('b-name').value,'Email: '+g('b-mail').value,'Package: '+sel.value,'Launch discount (20%): '+(g('b-offer').checked?'Yes':'No'),'','Project details:',g('b-msg').value].join('\n')}function build(){mt.href='mailto:nerotest6@gmail.com?subject='+encodeURIComponent('Project brief: '+sel.value)+'&body='+encodeURIComponent(text())}document.querySelectorAll('[data-pkg]').forEach(function(a){a.addEventListener('click',function(){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.indexOf(a.dataset.pkg)===0){sel.selectedIndex=i;break}}build()})});f.addEventListener('input',build);build();f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;copy(text(),function(){st.textContent='Project brief copied.'},function(){st.textContent='Automatic copy is unavailable.'})});var nav=document.querySelector('.nav'),toggle=document.querySelector('.menu-toggle');function closeMenu(){nav.classList.remove('is-open');toggle&&toggle.setAttribute('aria-expanded','false')}if(toggle)toggle.addEventListener('click',function(){var open=toggle.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open))});document.querySelectorAll('#site-links a').forEach(function(a){a.addEventListener('click',closeMenu)});window.addEventListener('resize',function(){if(innerWidth>860)closeMenu()})})})();
+(function(){
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var yearNode=document.getElementById('year'); if(yearNode) yearNode.textContent=String(new Date().getFullYear());
+
+  /* Currency display: EGP is canonical. USD is enabled only with a fresh live rate. */
+  var currency='EGP',usdPerEgp=null,rateStamp='',rateIsFallback=false,FALLBACK_USD_PER_EGP=0.0195,rateLoading=null;
+  var currencyButtons=document.querySelectorAll('[data-currency]');
+  var rateStatus=document.getElementById('rate-status');
+  var fxCacheKey='eltayar-egp-usd-rate-v1';
+  function money(amount,code){
+    try{return new Intl.NumberFormat('en-US',{style:'currency',currency:code,maximumFractionDigits:code==='EGP'?0:2}).format(amount);}
+    catch(e){return (code==='USD'?'$':'EGP ')+Number(amount).toFixed(code==='USD'?2:0);}
+  }
+  function renderPrices(){
+    document.querySelectorAll('.price[data-egp]').forEach(function(node){
+      var amount=Number(node.getAttribute('data-egp'));
+      var label=node.getAttribute('data-label')|| (node.getAttribute('data-egp')==='95000'?' / from':' / project');
+      var shown=currency==='USD' && usdPerEgp ? money(amount*usdPerEgp,'USD') : money(amount,'EGP');
+      node.innerHTML=shown+'<small>'+label+'</small>';
+    });
+    document.querySelectorAll('.old[data-old-egp]').forEach(function(node){
+      var amount=Number(node.getAttribute('data-old-egp'));
+      node.textContent=currency==='USD' && usdPerEgp ? money(amount*usdPerEgp,'USD') : money(amount,'EGP');
+    });
+    currencyButtons.forEach(function(btn){
+      var active=btn.getAttribute('data-currency')===currency;
+      btn.classList.toggle('is-active',active);
+      btn.setAttribute('aria-pressed',String(active));
+    });
+  }
+  function rateNote(){
+    if(currency==='EGP') return 'Base prices: Egyptian pounds.';
+    return rateIsFallback ? 'USD shown at an approximate rate (1 USD ≈ '+(1/usdPerEgp).toFixed(1)+' EGP). Live rate unavailable; final quote is confirmed in EGP.' : 'Live indicative rate · '+rateStamp+' · open.er-api.com';
+  }
+  async function setCurrency(next){
+    if(next==='USD' && !usdPerEgp){
+      if(rateStatus) rateStatus.textContent='Checking live EGP/USD rate…';
+      await loadExchangeRate();
+      if(!usdPerEgp){usdPerEgp=FALLBACK_USD_PER_EGP;rateIsFallback=true;}
+    }
+    currency=next; renderPrices();
+    if(rateStatus) rateStatus.textContent=rateNote();
+  }
+  currencyButtons.forEach(function(btn){
+    btn.addEventListener('click',function(){setCurrency(btn.getAttribute('data-currency'));});
+  });
+  async function loadExchangeRate(){
+    if(rateStatus && currency==='EGP') rateStatus.textContent='Checking live EGP/USD rate…';
+    try{
+      var cached=null;
+      try{cached=JSON.parse(localStorage.getItem(fxCacheKey)||'null');}catch(_e){}
+      var now=Date.now();
+      if(cached && Number(cached.rate)>0 && now-Number(cached.fetchedAt)<6*60*60*1000){
+        usdPerEgp=Number(cached.rate); rateIsFallback=false;
+        rateStamp=cached.updated||new Date(cached.fetchedAt).toISOString().slice(0,10);
+      }else{
+        var ctl=('AbortController' in window)?new AbortController():null; var tm=setTimeout(function(){if(ctl)ctl.abort();},6000);
+        var response=await fetch('https://open.er-api.com/v6/latest/EGP',{cache:'no-store',signal:ctl?ctl.signal:undefined}); clearTimeout(tm);
+        if(!response.ok) throw new Error('Exchange-rate service unavailable');
+        var data=await response.json();
+        if(data.result!=='success' || !data.rates || !(Number(data.rates.USD)>0)) throw new Error('No verified USD rate in response');
+        usdPerEgp=Number(data.rates.USD); rateIsFallback=false;
+        rateStamp=data.time_last_update_utc || new Date().toISOString();
+        try{localStorage.setItem(fxCacheKey,JSON.stringify({rate:usdPerEgp,updated:rateStamp,fetchedAt:now}));}catch(_e){}
+      }
+      renderPrices();
+      if(rateStatus) rateStatus.textContent=rateNote();
+    }catch(err){
+      usdPerEgp=null;
+      if(rateStatus) rateStatus.textContent=currency==='EGP'?'Base prices: Egyptian pounds. USD uses an approximate rate if the live rate is unavailable.':rateNote();
+    }
+  }
+  renderPrices();
+  loadExchangeRate();
+
+  /* ticker */
+  var words=['Custom software','Websites','Tracking dashboards','Brand registration','Cyber security','Automation','APIs'];
+  var t=document.getElementById('track');
+  var html=''; for(var i=0;i<2;i++){ html+=words.concat(words).map(function(w){return '<span>'+w+'</span>';}).join(''); }
+  if(t) t.innerHTML=html;
+
+  /* hero code rain */
+  try{
+    var cv=document.getElementById('rain'); if(!cv) throw new Error('Canvas is not present'); var cx=cv.getContext('2d'); if(!cx) throw new Error('Canvas context unavailable'); var W=0,H=0,cols=[],fs=14,chars='01{}<>/;=+*#';
+    var size=function(){var r=cv.getBoundingClientRect();W=cv.width=Math.max(1,r.width);H=cv.height=Math.max(1,r.height);cols=[];for(var i=0;i<Math.floor(W/fs);i++)cols.push(Math.random()*H/fs);cx.fillStyle='#04050a';cx.fillRect(0,0,W,H);};
+    size(); window.addEventListener('resize',size);
+    if(!rm){
+      setInterval(function(){
+        if(document.hidden)return;
+        cx.fillStyle='rgba(4,5,10,.14)';cx.fillRect(0,0,W,H);
+        cx.font=fs+'px monospace';cx.fillStyle='#f2b93b';
+        for(var i=0;i<cols.length;i++){
+          cx.fillText(chars.charAt(Math.floor(Math.random()*chars.length)),i*fs,cols[i]*fs);
+          if(cols[i]*fs>H&&Math.random()>.975)cols[i]=0; cols[i]+=1;
+        }
+      },70);
+    }
+  }catch(e){}
+
+  /* typed terminal */
+  var lines=['deploy --project your-brand --secure','scan --threats --depth=full','track --registry live --team all','launch --region global'];
+  var el=document.getElementById('typed');
+  if(el && rm){ el.textContent=lines[0]; }
+  else if(el){
+    var li=0,ci=0,dir=1;
+    (function tick(){
+      var s=lines[li];
+      ci+=dir; el.textContent=s.slice(0,ci);
+      var d=dir>0?42:20;
+      if(dir>0&&ci>=s.length){dir=-1;d=1800;}
+      else if(dir<0&&ci<=0){dir=1;li=(li+1)%lines.length;d=400;}
+      setTimeout(tick,d);
+    })();
+  }
+
+  /* countdown to the end of the launch offer */
+  var end=new Date('2026-12-31T23:59:59+02:00').getTime();
+  var p=function(n){return (n<10?'0':'')+n;};
+  function cd(){
+    var n=Math.max(0,end-Date.now()),s=Math.floor(n/1000);
+    var dn=document.getElementById('d'),hn=document.getElementById('h'),mn=document.getElementById('m'),sn=document.getElementById('s');
+    if(dn)dn.textContent=p(Math.floor(s/86400)); if(hn)hn.textContent=p(Math.floor(s%86400/3600));
+    if(mn)mn.textContent=p(Math.floor(s%3600/60)); if(sn)sn.textContent=p(s%60);
+  }
+  cd(); setInterval(cd,1000);
+
+  /* Copy helpers: Clipboard API first, then a temporary textarea fallback. */
+  function copy(text,node,done,fail){
+    function fallback(){
+      var ta=document.createElement('textarea');
+      ta.value=text; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.opacity='0'; ta.style.pointerEvents='none';
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var ok=false; try{ok=document.execCommand('copy');}catch(e){}
+      ta.remove(); if(ok){done();}else{fail();}
+    }
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(done,fallback);
+    }else{fallback();}
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var n=document.getElementById(b.getAttribute('data-copy')),old=b.textContent;
+      copy(n.textContent.trim(),n,function(){b.textContent='Copied';setTimeout(function(){b.textContent=old;},1600);},function(){b.textContent='Select text';setTimeout(function(){b.textContent=old;},1600);});
+    });
+  });
+
+  /* package buttons preselect the brief */
+  var sel=document.getElementById('b-pkg');
+  document.querySelectorAll('[data-pkg]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var v=a.getAttribute('data-pkg');
+      for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===v || sel.options[i].text.indexOf(v)===0){sel.selectedIndex=i;break;} }
+      build();
+    });
+  });
+
+  document.querySelectorAll('[data-case]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var field=document.getElementById('b-msg');
+      var label='Project walkthrough request: '+a.getAttribute('data-case')+'\\n\\n';
+      if(field && field.value.indexOf(label)!==0) field.value=label+field.value;
+      build();
+    });
+  });
+
+  /* brief builder */
+  var f=document.getElementById('brief'),st=document.getElementById('b-status'),mt=document.getElementById('b-mailto');
+  function text(){
+    var g=function(id){return document.getElementById(id);};
+    return ['Project brief for Eltayar Group','',
+      'Name: '+(g('b-name').value||'-'),
+      'Email: '+(g('b-mail').value||'-'),
+      'Phone: '+(g('b-phone').value||'-'),
+      'Preferred contact: '+g('b-contact').value,
+      'Package: '+sel.value,
+      'Launch-offer eligibility review requested: '+(g('b-offer').checked?'Yes':'No')+' (subject to confirmation; not automatically applied)','',
+      'Project details:',g('b-msg').value||'-'].join('\n');
+  }
+  function build(){
+    var subj='Project brief: '+sel.value;
+    mt.href='mailto:nerotest6@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(text());
+  }
+  f.addEventListener('input',build); build();
+  var submitButton=document.getElementById('b-submit');
+  f.addEventListener('submit',async function(e){
+    e.preventDefault(); st.textContent='';
+    if(!f.reportValidity()) return;
+    build();
+    var cfg=window.ELTAYAR_CONFIG||{};
+    if(!cfg.supabaseUrl || !cfg.supabaseAnonKey || !/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(cfg.supabaseUrl) || cfg.supabaseAnonKey.indexOf('YOUR_')!==-1){
+      st.textContent='Online requests are not configured yet. Add your Supabase project URL and public anon key to assets/js/config.js, then deploy the submit-project Edge Function. No request has been saved. Use the email option meanwhile.'; return;
+    }
+    var original=submitButton.textContent; submitButton.disabled=true; submitButton.textContent='Sending request…';
+    try{
+      var payload={name:document.getElementById('b-name').value.trim(),email:document.getElementById('b-mail').value.trim(),phone:document.getElementById('b-phone').value.trim(),preferred_contact:document.getElementById('b-contact').value,package_name:sel.value,details:document.getElementById('b-msg').value.trim(),launch_discount:document.getElementById('b-offer').checked,consent:document.getElementById('b-consent').checked,website:document.getElementById('b-website').value};
+      var response=await fetch(cfg.submitFunctionUrl || (cfg.supabaseUrl.replace(/\/$/,'')+'/functions/v1/submit-project'),{method:'POST',headers:{'Content-Type':'application/json','apikey':cfg.supabaseAnonKey,'Authorization':'Bearer '+cfg.supabaseAnonKey},body:JSON.stringify(payload)});
+      var result={}; try{result=await response.json();}catch(_e){}
+      if(!response.ok || !result.success) throw new Error(result.error||'The request could not be saved.');
+      st.textContent='Request received successfully. Reference: '+result.reference_code+'. Keep this code for follow-up.';
+      f.reset(); build();
+    }catch(err){ st.textContent='We could not save your request: '+(err.message||'temporary service issue')+'. Please use “Open in email app” or try again later.'; }
+    finally{submitButton.disabled=false;submitButton.textContent=original;}
+  });
+
+  /* Accessible responsive navigation */
+  var nav=document.querySelector('.nav'),toggle=document.querySelector('.menu-toggle');
+  function closeMenu(){nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+  toggle.addEventListener('click',function(){
+    var open=toggle.getAttribute('aria-expanded')!=='true';
+    nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  });
+  document.querySelectorAll('#site-links a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('resize',function(){if(window.innerWidth>860)closeMenu();});
+})();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Eltayar Group","email":"nerotest6@gmail.com","telephone":["+201060176505","+201031062938"]}</script>
-</body>
-</html>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Eltayar Group",
+  "email":"nerotest6@gmail.com",
+  "telephone":["+201060176505","+201031062938"],
+  "description":"Custom software, websites, web apps, project-tracking dashboards, automation and security-minded engineering."
+}
+</script>
+</body></html>
