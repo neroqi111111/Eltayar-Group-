@@ -1,6 +1,6 @@
-/* Public browser configuration only. Never put service-role or secret keys here. */
+// Optional: fill these in to enable the online project-request form (Supabase).
+// Use ONLY the public anon key here, never a service-role key.
 window.ELTAYAR_CONFIG = {
-  supabaseUrl: "https://izxdoyqypugjbskfuqjc.supabase.co",
-  supabaseAnonKey: "sb_publishable_HXZmulncL6hyQUQQ6tDuyw_7yETyGDf",
-  submitFunctionUrl: "https://izxdoyqypugjbskfuqjc.supabase.co/functions/v1/submit-project"
+  supabaseUrl: "",
+  supabaseAnonKey: ""
 };
